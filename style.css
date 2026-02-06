@@ -1,0 +1,135 @@
+/* Reset dasar */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #1a1a2e;
+    color: white;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    padding-top: 60px; 
+    min-height: 100vh;
+}
+
+/* Container Utama */
+.main-container {
+    width: 90%;
+    max-width: 800px;
+    padding-bottom: 50px; /* Biar kalau scroll mentok bawah gak kepotong */
+}
+
+/* --- HEADER --- */
+header {
+    text-align: center;
+}
+
+h1 {
+    font-size: 3rem;
+    margin-bottom: 5px;
+    letter-spacing: 1px;
+    font-weight: 700;
+}
+
+.subtitle {
+    color: #a0a0a0;
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 0.9rem;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+/* Garis Pemisah */
+.divider {
+    border: 0;
+    height: 1px;
+    background: rgba(255, 255, 255, 0.1);
+    margin-bottom: 30px;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* --- BAGIAN KONTEN --- */
+.content-left {
+    text-align: left;
+}
+
+.section-title {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: #ffcc00; 
+    font-weight: 600;
+}
+
+/* INI YANG PENTING: Jarak untuk Section Kedua */
+.section-spacer {
+    margin-top: 60px; /* Kasih jarak jauh dari section atas */
+    padding-top: 20px;
+    border-top: 1px dashed rgba(255, 255, 255, 0.1); /* Garis putus-putus tipis pemisah */
+}
+
+/* --- GRID LAYOUT --- */
+.grid-links {
+    display: flex;
+    justify-content: flex-start; /* Default: Kiri */
+    flex-wrap: wrap; 
+    gap: 15px;
+}
+
+/* --- CARD DESIGN --- */
+.card {
+    background-color: #16213e;
+    width: 100px;
+    height: 100px;
+    padding: 10px;
+    border-radius: 12px;
+    text-decoration: none;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.card img {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 8px;
+    object-fit: contain; 
+}
+
+.card span {
+    font-weight: 500;
+    font-size: 12px; /* Ukuran pas biar nama panjang muat */
+    text-align: center;
+    line-height: 1.2;
+}
+
+/* Hover Effect (Animasi saat ditunjuk mouse) */
+.card:hover {
+    background-color: #0f3460;
+    transform: translateY(-5px);
+    border-color: rgba(255, 204, 0, 0.5); 
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+.card:hover img {
+    transform: scale(1.1);
+}
+
+/* --- RESPONSIVE (KHUSUS HP) --- */
+/* Kalau layar kecil (HP), icon otomatis ke tengah biar rapi */
+@media (max-width: 600px) {
+    .grid-links {
+        justify-content: center; 
+    }
+    .content-left {
+        text-align: center;
+    }
+    .main-container {
+        width: 95%;
+    }
+}
